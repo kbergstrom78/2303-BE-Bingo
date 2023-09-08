@@ -1,0 +1,5 @@
+/* Import Bootstrap */
+@import 'bootstrap/scss/bootstrap';
+
+/* Import your custom stylesheet */
+@import 'bingo_stylesheet';

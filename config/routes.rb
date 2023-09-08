@@ -3,9 +3,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :bingo, only: [] do
+  resources :bingo, only: [:new] do
     collection do
-      get 'new'
+      get :caller
+      get :card
     end
   end
+
+  post '/set_session', to: 'bingo#set_session'
 end

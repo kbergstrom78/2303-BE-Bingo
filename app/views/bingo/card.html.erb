@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bingo</title>
+    <link rel="stylesheet" href="/assets/bingo.css">
+    <script src="/assets/bingo.js"></script>
+</head>
+<body>
+    <main class="main-content">
+        <div class="title">
+            <span class="bingo-title">2303-BE BINGO</span>
+        </div>
+
+        <div class="bingo-card">
+            <% @bingo_items.each do |bingo_item| %>
+                <%= render partial: 'bingo_item', locals: { bingo_item: bingo_item } %>
+            <% end %>
+        </div>
+
+        <div class="clear-button">Clear board</div>
+    </main>
+</body>
+</html>
